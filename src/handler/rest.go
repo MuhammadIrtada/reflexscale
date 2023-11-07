@@ -16,7 +16,7 @@ type rest struct {
 func Init(uc *usecase.Usecase) *rest {
 	r := &rest{}
 
-	r.http = gin.New()
+	r.http = gin.Default()
 	r.uc = uc
 
 	r.RegisterMiddlewareAndRoutes()
