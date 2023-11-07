@@ -31,6 +31,24 @@ func (r *rest) RegisterMiddlewareAndRoutes() {
 	v1 := r.http.Group("api/v1")
 
 	v1.POST("register", r.CreateUser)
+	v1.POST("login", r.UserLogin)
+
+	auth := v1.Group("", r.ValidateToken())
+	{
+		userGroup := auth.Group("user") 
+		{
+			userGroup.GET("", r.ReadAll)
+			userGroup.GET(":id", r.ReadByID)
+			userGroup.PATCH(":id", r.Update)
+			userGroup.DELETE(":id", r.Delete)
+		}
+		
+		hasilTestGroup := auth.Group("hasil-test")
+		{
+			hasilTestGroup.POST("", r.CreateHasilTest)
+		}
+	}
+
 }
 
 func (r *rest) Run() {
