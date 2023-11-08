@@ -2,7 +2,7 @@ package repository
 
 import (
 	"reflexscale/database/mysql"
-	entity "reflexscale/src/entitiy"
+	"reflexscale/src/entity"
 )
 
 type (

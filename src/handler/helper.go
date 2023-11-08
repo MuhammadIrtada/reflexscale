@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"reflexscale/src/entitiy"
+	"reflexscale/src/entity"
 
 	"github.com/gin-gonic/gin"
 )

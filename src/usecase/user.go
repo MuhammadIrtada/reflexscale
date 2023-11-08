@@ -3,7 +3,7 @@ package usecase
 import (
 	"errors"
 	"reflexscale/sdk/jwt"
-	"reflexscale/src/entitiy"
+	"reflexscale/src/entity"
 	"reflexscale/src/repository"
 
 	"golang.org/x/crypto/bcrypt"

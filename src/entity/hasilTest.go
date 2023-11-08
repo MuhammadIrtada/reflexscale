@@ -17,7 +17,7 @@ type (
 
 	HasilTestResponse struct {
 		ID        uint   `json:"id"`
-		Poin      int    `json:"poin`
+		Poin      int    `json:"poin"`
 		CreatedAt string `json:"created_at"`
 	}
 )

@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"reflexscale/src/entitiy"
+	"reflexscale/src/entity"
 
 	"gorm.io/gorm"
 )

@@ -3,7 +3,7 @@ package handler
 import (
 	"net/http"
 	"reflexscale/sdk/custome_time"
-	entity "reflexscale/src/entitiy"
+	"reflexscale/src/entity"
 
 	"github.com/gin-gonic/gin"
 )

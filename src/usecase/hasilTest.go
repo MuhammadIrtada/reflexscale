@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	entity "reflexscale/src/entitiy"
+	"reflexscale/src/entity"
 	"reflexscale/src/repository"
 )
 
