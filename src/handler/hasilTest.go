@@ -2,6 +2,7 @@ package handler
 
 import (
 	"net/http"
+	"reflexscale/sdk/custome_time"
 	entity "reflexscale/src/entitiy"
 
 	"github.com/gin-gonic/gin"
@@ -24,5 +25,13 @@ func (r *rest) CreateHasilTest(c *gin.Context) {
 		return
 	}
 
-	SuccessResponse(c, http.StatusCreated, "Create user success", createHasilTest)
+	SuccessResponse(c, http.StatusCreated, "Create user success", convertHasilTestResponse(*createHasilTest))
+}
+
+func convertHasilTestResponse(hasilTest entity.HasilTest) entity.HasilTestResponse {
+	return entity.HasilTestResponse{
+		ID:        hasilTest.ID,
+		Poin:      hasilTest.Poin,
+		CreatedAt: custome_time.ConvertTimeFormat(hasilTest.CreatedAt.String()),
+	}
 }

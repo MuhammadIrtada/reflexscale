@@ -12,6 +12,12 @@ type (
 	}
 
 	HasilTestInputParam struct {
-		Poin      int       `json:"poin" binding:"required"`
+		Poin int `json:"poin" binding:"required"`
+	}
+
+	HasilTestResponse struct {
+		ID        uint   `json:"id"`
+		Poin      int    `json:"poin`
+		CreatedAt string `json:"created_at"`
 	}
 )
